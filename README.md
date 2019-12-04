@@ -57,4 +57,21 @@ Find /0 elements that are LATEST in <branch_name>:
     ct find . -type f -version "version(.../<branch_name>/LATEST)&&version(.../<branch_name>/0)" -print
 
 
+## Labels
+Always unlock the label you plan to work with:
+    
+    ct unlock lbtype:<label_name>
+
+Remove a label from file
+
+    ct rmlabel <label_name> <file_name>@@/<branch_name>/<vers>
+    
+Add a label to a version
+
+    ct mklabel <label_name> <file_name>@@/<branch_name>/<vers>
+    
+## Branching
+Remove a file from a branch
+
+    ct rmbranch <file_name>@@/main/<branch_name>
     

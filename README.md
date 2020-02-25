@@ -35,7 +35,7 @@ Set the configspec to a certain file:
 
     ct setcs <file_name>
 
-## Elements manipulation
+## Elements
 Add a directory to a cc project:
 
     ct mkelem -mkpath <dir_name>
@@ -55,6 +55,10 @@ Clean a view of all untracked files (use with due care):
 Find /0 elements that are LATEST in <branch_name>:
 
     ct find . -type f -version "version(.../<branch_name>/LATEST)&&version(.../<branch_name>/0)" -print
+    
+List all checkouts done by me in a view:
+
+    ct lsc -me -cvi -a
 
 
 ## Labels

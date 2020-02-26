@@ -60,6 +60,15 @@ List all checkouts done by me in a view:
 
     ct lsc -me -cvi -a
 
+### Comparing elements based on labels
+
+List elements labelled `B` whose version in label `A` is different from label `B`:
+
+	ct find -all -element "{lbtype_sub(A) && lbtype_sub(B)}" -version "{lbtype(A) && ! lbtype(B)}" -print
+	
+Sometimes, to list *ALL* objects of a kind, you need to filter them by *NOT* having a "dummy" label:
+
+    ct find . -version "{version(main/LATEST) && ! lbtype(dummy_label_here)}" -print
 
 ## Labels
 Always unlock the label you plan to work with:

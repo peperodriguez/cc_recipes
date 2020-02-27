@@ -59,6 +59,12 @@ Find /0 elements that are LATEST in <branch_name>:
 List all checkouts done by me in a view:
 
     ct lsc -me -cvi -a
+    
+List history of an element, with the following format:
+"\<element_path\> \<version\> ; \<date\> \<author\> \<operation\> : \<comment\>"
+	
+    ct lsh -fmt "%En %Vn \t; %Sd %u %o: %c\n" <element_path>
+   
 
 ### Comparing elements based on labels
 

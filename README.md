@@ -98,3 +98,11 @@ Remove a file from a branch
 
     ct rmbranch <file_name>@@/main/<branch_name>
     
+## Environment variables
+Clearcase generates temporary environment variables with useful information (seems that these only exist in the environment of a -exec command):
+
+    CLEARCASE_PN : Element name (full path) result of the previously run command, without the version reference.
+    CLEARCASE_XPN : Extended CLEARCASE_PN (i.e., with the version reference).
+
+More environment variables are [listed here](https://mahantheshkn.blogspot.com/2010/04/clearcase-environment-variables-that.html "Clearcase Technical blog").
+    

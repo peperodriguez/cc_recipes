@@ -79,6 +79,10 @@ Sometimes, to list *ALL* objects of a kind, you need to filter them by *NOT* hav
 List a diff (clearcase format) between label `A`and `B` :
 
     ct find <path> -element "{lbtype_sub(A) && lbtype_sub(B)}" -version "{lbtype(A) && ! lbtype(B)}" -exe 'cleartool diff -col 180 $CLEARCASE_XPN $CLEARCASE_PN@@/B'
+    
+Or:
+    
+    ct find <path> -element "{lbtype_sub(A) && lbtype_sub(B)}" -version "{lbtype(A) && ! lbtype(B)}" -exe 'cleartool diff -col 180 $CLEARCASE_PN@@/A $CLEARCASE_PN@@/B'
 
 ## Labels
 Always unlock the label you plan to work with:

@@ -52,6 +52,10 @@ Clean a view of all untracked files (use with due care):
 
     ct lsprivate | grep -v checkedout | xargs /bin/rm -rf
     
+Find elements in your view that are not LATEST in <branch_name>:
+
+    ct find . -cvi -version "version( ! version(/<branch_name>/LATEST)" -print
+
 Find /0 elements that are LATEST in <branch_name>:
 
     ct find . -type f -version "version(.../<branch_name>/LATEST)&&version(.../<branch_name>/0)" -print

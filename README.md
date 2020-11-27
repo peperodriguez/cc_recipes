@@ -54,7 +54,7 @@ Clean a view of all untracked files (use with due care):
     
 Find elements in your view that are not LATEST in <branch_name>:
 
-    ct find . -cvi -version "version( ! version(/<branch_name>/LATEST))" -print
+    ct find . -cvi -version '( ! version(/<branch_name>/LATEST))' -print
 
 Find /0 elements that are LATEST in <branch_name>:
 
